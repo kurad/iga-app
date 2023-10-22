@@ -1,20 +1,46 @@
 <?php
-
-use App\Http\Controllers\LevelsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UnitController;
+use App\Http\Controllers\LevelController;
+use App\Http\Controllers\SchoolController;
+use App\Http\Controllers\SubjectController;
 
 
-Route::get('levels-list', [LevelsController::class, 'getLevels']);
-Route::post('level', [LevelsController::class, 'store']);
+
+
+
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
+Route::post('signin', [AuthController::class, 'signin']);
+
+Route::prefix("/v1")->group(function () {
+
+    
+    Route::get('/province', [LevelController::class, 'provinces']);
+    Route::get('/district', [LevelController::class, 'districts']);
+    Route::get('/sector', [LevelController::class, 'sectors']);
+    // Route::get('/cells', [LevelController::class, 'cells']);
+
+
+    Route::get("/schools", [SchoolController::class, "index"]);
+    Route::get("/school-info", [SchoolController::class, "schoolDetails"]);
+    Route::post("/school", [SchoolController::class, "store"]);
+
+    Route::get("levels", [LevelController::class, "index"]);
+    Route::get("level/{id}", [LevelController::class, "show"]);
+    Route::put("level/{id}", [LevelController::class, "update"]);
+    Route::post("levels", [LevelController::class, "store"]);
+
+    Route::get("subjects", [SubjectController::class, "index"]);
+    Route::post("subjects", [SubjectController::class, "store"]);
+    
+
+
+    Route::get("units", [UnitController::class, "index"]);
+    Route::get("subjects/{id}", [UnitController::class, "unitPerSubject"]);
+    Route::get("units/subjects/{id}", [UnitController::class, "SubjectName"]);
+    Route::post("units", [UnitController::class, "store"]);
+
+    });

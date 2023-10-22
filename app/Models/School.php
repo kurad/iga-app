@@ -11,7 +11,7 @@ class School extends Model
 {
     use HasFactory;
 
-    protected $fillable =['name','type','location_id'];
+    protected $fillable =['name','type','sector_id'];
 
     public $timestamps = false;
     

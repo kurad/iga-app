@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Models\Unit;
-use App\Models\Classe;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -12,12 +11,12 @@ class Subject extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'class_id'
+        'level_id'
     ];
 
-    public function classes()
+    public function level()
     {
-        return $this->belongsTo(Classe::class);
+        return $this->belongsTo(Level::class);
     }
 
     public function units()

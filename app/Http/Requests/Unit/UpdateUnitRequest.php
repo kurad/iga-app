@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Unit;
 
-use App\DTO\School\CreateSchoolDto;
 use Illuminate\Foundation\Http\FormRequest;
+use App\DTO\Unit\UpdateUnitDto;
 
-class SchoolRequest extends FormRequest
+class UpdateUnitRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,15 +23,15 @@ class SchoolRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' =>'required|string',
-            'type' =>'nullable|string',
-            'sector_id' => 'required|integer'
+            'unit_title' =>'required|string',
+            'key_unit_competence' =>'nullable|string',
+            'subject_id' => 'required|integer'
         ];
 
     }
 
     public function passedValidation()
     {
-        $this->dto = new CreateSchoolDto($this->validated());
+        $this->dto = new UpdateUnitDto($this->validated());
     }
 }

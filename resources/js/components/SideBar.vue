@@ -8,9 +8,18 @@
                     Dashboard
                 </router-link>
 
-                <router-link class="nav-link" to="/levels">
+                <router-link class="nav-link" :to="{ name: 'levels' }">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Levels
+                </router-link>
+                <router-link class="nav-link" to="/schools">
+                    <div class="sb-nav-link-icon"><i class="fas fa-school"></i></div>
+                    Schools
+                </router-link>
+
+                <router-link class="nav-link" to="/subjects">
+                    <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                    Subjects
                 </router-link>
                 <div class="sb-sidenav-menu-heading">Interface</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"

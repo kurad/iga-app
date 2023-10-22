@@ -5,14 +5,16 @@ namespace App\Services;
 use Exception;
 use App\Models\Level;
 use App\Models\School;
+use Illuminate\Http\Request;
 use App\DTO\Level\CreateLevelDto;
 use App\DTO\Level\UpdateLevelDto;
-use App\DTO\School\UpdateSchoolDto;
+use Illuminate\Support\Facades\DB;
 use App\Exceptions\UknownException;
 use Illuminate\Support\Facades\Log;
 use App\Exceptions\ItemNotFoundException;
 use Illuminate\Database\Eloquent\Collection;
 use App\Exceptions\InvalidDataGivenException;
+
 
 class LevelService extends AbstractService
 {
@@ -34,7 +36,6 @@ class LevelService extends AbstractService
         try {
             $level = Level::create([
                 "name" => $name
-                
             ]);
 
             return $level;
@@ -60,7 +61,7 @@ class LevelService extends AbstractService
 
     public function allLevels(): Collection
     {
-        $levels = Level::all();
+        $levels = Level::orderBy('name')->get();
 
         return $levels;
     }
@@ -98,5 +99,28 @@ class LevelService extends AbstractService
         }
 
         return $school->delete();
+    }
+
+    public function provinces()
+    {
+        $provinces = DB::table('provinces')->get();
+        return ($provinces);
+    }
+    public function districts(Request $request)
+    {
+        $districts = DB::table('districts')->where('province_id',$request->province_id)->get();
+        return ($districts);
+    }
+
+    public function sectors(Request $request)
+    {
+        $sectors = DB::table('sectors')->where('district_id',$request->district_id)->get();
+        return ($sectors);
+    }
+
+    public function cells(Request $request)
+    {
+        $cells = DB::table('cells')->where('sector_id',$request->sector_id)->get();
+        return ($cells);
     }
 }

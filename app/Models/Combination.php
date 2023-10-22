@@ -5,18 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Level extends Model
+class Combination extends Model
 {
     use HasFactory;
+    protected $fillable = ['name','level_id'];
 
-    protected $guarded = [];
-
-    public $timestamps = false;
-
-    public function combination()
+    public function levels()
     {
-        return $this->hasMany(Combination::class);
+        return $this->belongsTo(Level::class);
     }
+
     public function subjects()
     {
         return $this->hasMany(Subject::class);

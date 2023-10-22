@@ -2,20 +2,17 @@
 import './bootstrap';
 import { createApp } from 'vue';
 import jQuery from 'jquery'
+import router from './router';
+import sidebar from './components/SideBar.vue'
+
 // import VueRouter from 'vue-router'
 
 
 window.$ = window.jQuery = jQuery;
 
-const app = createApp({});
+const app = createApp({
+    components: {
+        sidebar
+    }
+}).use(router).mount('#app')
 
-import router from './router/router.js';
-import DashboardComponent from './components/Dashboard.vue';
-import LevelsComponent from './components/LevelIndex.vue';
-import SideBar from './components/SideBar.vue';
-app.component('dashboard-component', DashboardComponent);
-app.component('levels-component', LevelsComponent);
-app.component('sidebar', SideBar);
-
-
-app.use(router).mount('#app');

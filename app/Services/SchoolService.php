@@ -23,7 +23,7 @@ class SchoolService extends AbstractService
 
         $name = $data->name;
         $type = $data->type;
-        $location_id = $data->location_id;
+        $sector_id = $data->sector_id;
 
 
         $schoolExists = School::where("name", $name)->exists();
@@ -35,7 +35,7 @@ class SchoolService extends AbstractService
             $school = School::create([
                 "name" => $name,
                 "type" => $type,
-                "location_id" => $location_id,
+                "sector_id" => $sector_id,
                 
             ]);
 
@@ -76,13 +76,13 @@ class SchoolService extends AbstractService
 
         $name = $data->name;
         $type = $data->type;
-        $location_id = $data->location_id;
+        $sector_id = $data->sector_id;
 
         try {
             $school->update([
                 "name" => $name,
                 "type" => $type,
-                "location_id" => $location_id,
+                "sector_id" => $sector_id,
             ]);
 
             return $school;
@@ -103,7 +103,15 @@ class SchoolService extends AbstractService
         if (is_null($school)) {
             throw new ItemNotFoundException("The school does not exist");
         }
-
         return $school->delete();
+    }
+    public function schoolDetails()
+    {
+        $schoolInfo = School::join('sectors','sectors.id','=','schools.sector_id')
+                            ->join('districts', 'districts.id','=','sectors.district_id')
+                            ->join('provinces', 'provinces.id', '=', 'districts.province_id')
+                            ->get();
+
+        return($schoolInfo);
     }
 }

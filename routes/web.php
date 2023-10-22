@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LevelsController;
-
 
 
 Route::get('/', function () {
@@ -13,6 +11,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/{any}', function(){
+    return view('layouts.master');
+})->where('any', '.*');
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/levels',[LevelsController::class, 'index']);
+// Route::get('/levels',[LevelsController::class, 'index']);
+// Route::get('/schools',[SchoolController::class, 'schoolDetails']);

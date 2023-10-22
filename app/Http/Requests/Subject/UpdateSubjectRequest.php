@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use App\DTO\School\CreateSchoolDto;
 use Illuminate\Foundation\Http\FormRequest;
+use App\DTO\Subject\UpdateSubjectDto;
 
-class SchoolRequest extends FormRequest
+class UpdateSubjectRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,14 +24,13 @@ class SchoolRequest extends FormRequest
     {
         return [
             'name' =>'required|string',
-            'type' =>'nullable|string',
-            'sector_id' => 'required|integer'
+            'level_id' => 'required|integer'
         ];
 
     }
 
     public function passedValidation()
     {
-        $this->dto = new CreateSchoolDto($this->validated());
+        $this->dto = new UpdateSubjectDto($this->validated());
     }
 }

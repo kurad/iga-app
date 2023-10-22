@@ -20,6 +20,8 @@ class Unit extends Model
         'subject_id'
     ];
 
+    public $timestamps = false;
+    
     public function subjects()
     {
         return $this->belongsTo(Subject::class);

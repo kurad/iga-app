@@ -88,7 +88,7 @@
     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="{{asset('assets/home/img/carousel-1.jpg')}}" alt="">
+                <img class="img-fluid" src="{{asset('assets/home/img/carousel-1.jpg')}}" alt="" height="100px">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
@@ -98,9 +98,8 @@
                                 </h5>
                                 <h1 class="display-3 text-white animated slideInDown">The Best Online Learning Platform
                                 </h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed
-                                    stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus
-                                    eirmod elitr.</p>
+                                <p class="fs-5 text-white mb-4 pb-2">A comprehensive platform is designed to empower
+                                    students by providing a centralized hub that adds quality to education.</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
                                     More</a>
                                 <a href="{{ route('login') }}"
@@ -111,7 +110,7 @@
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="{{asset('assets/home/img/carousel-2.jpg')}}" alt="">
+                <img class="img-fluid" src="{{asset('assets/home/img/carousel-2.jpg')}}" alt="" height="100px">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
@@ -119,11 +118,10 @@
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses
                                 </h5>
-                                <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home
+                                <h1 class="display-3 text-white animated slideInDown">Access quality education anytime!
                                 </h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed
-                                    stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus
-                                    eirmod elitr.</p>
+                                <p class="fs-5 text-white mb-4 pb-2">“Education is the most powerful weapon which you
+                                    can use to change the world.”~Nelson Mandela</p>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
                                     More</a>
                                 <a href="{{ route('login') }}"
@@ -147,7 +145,10 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
                             <h5 class="mb-3">Skilled Instructors</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <p>Dive into a dynamic exchange of knowledge from dedicated educators. Pose questions,
+                                express your doubts, and receive personalized responses and guidance. Our platform
+                                ensures your learning needs are met with care and expertise, making education an
+                                engaging and interactive adventure.</p>
                         </div>
                     </div>
                 </div>
@@ -156,7 +157,9 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-globe text-primary mb-4"></i>
                             <h5 class="mb-3">Online Classes</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <p>Our online courses cover a wide range of subjects, from English and Math to Science and
+                                History. Our teachers are highly qualified and experienced, and they are dedicated to
+                                helping students learn and grow.</p>
                         </div>
                     </div>
                 </div>
@@ -164,8 +167,10 @@
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Home Projects</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <h5 class="mb-3">Tutoring</h5>
+                            <p>In addition to our online courses, we also offer one-on-one tutoring sessions. Our tutors
+                                work with students to identify their strengths and weaknesses, and they develop
+                                personalized lesson plans to help them improve.</p>
                         </div>
                     </div>
                 </div>
@@ -174,7 +179,8 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
                             <h5 class="mb-3">Book Library</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <p>Conveniently, study and access a digital library packed with resources from the Rwanda
+                                Education Board (REB) whenever and wherever you are.</p>
                         </div>
                     </div>
                 </div>
@@ -196,11 +202,15 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to eLEARNING</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                    <h1 class="mb-4">Welcome to to iGa</h1>
+                    <p class="mb-4">A platform that adds quality to education.</p>
+                    <p class="mb-4">iGa was founded with the goal of adding quality to education. We believe that every
+                        student deserves access to quality teachers, regardless of where they live. Our team is
+                        passionate about education and is dedicated to making a positive impact in the lives of students
+                        around Rwanda. We provide a range of services to students, including access to educational
+                        materials, academic support, and guidance from experienced teachers. Our platform is designed to
+                        be user-friendly and easy to navigate, making it easy for students to get the help they need to
+                        succeed.
                     </p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
@@ -210,17 +220,11 @@
                             <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online REB library
                             </p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Tutoring
                             </p>
                         </div>
                     </div>
@@ -247,7 +251,7 @@
                                 <img class="img-fluid" src="{{asset('assets/home/img/cat-1.jpg')}}" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                     style="margin: 1px;">
-                                    <h5 class="m-0">Web Design</h5>
+                                    <h5 class="m-0">Biology & Chemistry</h5>
                                     <small class="text-primary">49 Courses</small>
                                 </div>
                             </a>
@@ -257,7 +261,7 @@
                                 <img class="img-fluid" src="{{asset('assets/home/img/cat-2.jpg')}}" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                     style="margin: 1px;">
-                                    <h5 class="m-0">Graphic Design</h5>
+                                    <h5 class="m-0">Mathematics & Physics</h5>
                                     <small class="text-primary">49 Courses</small>
                                 </div>
                             </a>
@@ -267,7 +271,7 @@
                                 <img class="img-fluid" src="{{asset('assets/home/img/cat-3.jpg')}}" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                     style="margin: 1px;">
-                                    <h5 class="m-0">Video Editing</h5>
+                                    <h5 class="m-0">Computer Science</h5>
                                     <small class="text-primary">49 Courses</small>
                                 </div>
                             </a>
@@ -280,7 +284,7 @@
                             src="{{asset('assets/home/img/cat-4.jpg')}}" alt="" style="object-fit: cover;">
                         <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                             style="margin:  1px;">
-                            <h5 class="m-0">Online Marketing</h5>
+                            <h5 class="m-0">Geography & Economics</h5>
                             <small class="text-primary">49 Courses</small>
                         </div>
                     </a>

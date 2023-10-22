@@ -11,5 +11,5 @@ class UpdateSchoolDto
 
     public string $name;
     public string $type;
-    public int $location_id;
+    public int $sector_id;
 }

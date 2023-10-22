@@ -49,7 +49,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <button type="submit" class="btn btn-primary">Save</button>
                             </div>
                         </div>
                     </form>
@@ -59,9 +59,6 @@
             <!-- ===============================================================================-->
 
         </div>
-
-
-
     </main>
 </template>
 <script>
@@ -78,15 +75,15 @@ export default {
     },
     methods: {
         async getLevels() {
-            let response = await axios.get('/api/levels-list');
-            this.levels = response.data.data;
+            let response = await axios.get('api/v1/levels');
+            this.levels = response.data;
             console.log(this.levels);
         },
         newLevel() {
             $('#newLevel').modal('show');
         },
         async storeLevel(form) {
-            await axios.post('/api/level', {
+            await axios.post('api/v1/levels', {
                 name: this.form.level_name
             })
                 .then((response) => {
