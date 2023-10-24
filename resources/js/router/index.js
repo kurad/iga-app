@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import HomeView from '../views/HomeView.vue'
+// import HomeView from '../components/views/Home/Home.vue'
 import LevelsIndex from '../components/LevelIndex.vue';
 import Dashboard from '../components/Dashboard.vue';
 import SchoolComponent from '../components/views/SchoolComponent.vue'

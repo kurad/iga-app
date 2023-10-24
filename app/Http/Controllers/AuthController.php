@@ -21,7 +21,7 @@ class AuthController extends Controller
         ]);
         if(auth()->attempt($creadentials)){
             $user = Auth::user();
-            $user['token'] = $user->createToken('iGA')->accessToken;
+            $user['token'] = $user->createToken('bigStore')->accessToken;
             return response()->json([
                 'user' => $user
             ], 200);
@@ -39,7 +39,7 @@ class AuthController extends Controller
                 $status = 200;
                 $response = [
                     'user' => Auth::user(),
-                    'token' => Auth::user()->createToken('bigStore')->accessToken,
+                    'token' => Auth::user()->createToken('bigStore')->plainTextToken,
                 ];
             }
 
@@ -69,6 +69,11 @@ class AuthController extends Controller
             'message' => 'User Registered successfully',
             'user' => $user
         ]);
+    }
+    public function getUser()
+    {
+        $user = auth()->user();
+        return response()->json($user, 200);
     }
         public function logout()
         {

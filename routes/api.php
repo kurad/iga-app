@@ -14,6 +14,7 @@ use App\Http\Controllers\SubjectController;
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 Route::post('signin', [AuthController::class, 'signin']);
+Route::get('/user', [AuthController::class, 'getUser'])->middleware('auth:api');
 
 Route::prefix("/v1")->group(function () {
 
@@ -43,4 +44,9 @@ Route::prefix("/v1")->group(function () {
     Route::get("units/subjects/{id}", [UnitController::class, "SubjectName"]);
     Route::post("units", [UnitController::class, "store"]);
 
+
+    });
+
+    Route::group(['middleware' => 'auth:sunctum'], function(){
+        Route::get('/topics',[TopicController::class, "index"]);
     });
